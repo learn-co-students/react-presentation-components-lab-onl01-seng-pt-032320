@@ -6,12 +6,12 @@ class SimpleComponent extends Component {
     super()
 
     this.state = {
-      mood: 'happy'
+      mood:'happy'
     }
   }
 
   handleClick = event => {
-    this.state.mood === 'happy' ? this.setState({ mood: 'sad' }) : this.setState({ mood: 'happy' })
+    this.state.mood === 'happy' ? this.setState({ mood:'sad' }) : this.setState({ mood:'happy' })
   }
 
   render = () => <div onClick={ event => this.handleClick(event) }> { this.state.mood }</div>
