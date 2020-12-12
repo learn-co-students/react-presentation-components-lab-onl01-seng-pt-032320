@@ -10,11 +10,19 @@ class SimpleComponent extends Component {
     }
   }
 
-  handleClick = event => {
-    this.state.mood === 'happy' ? this.setState({ mood:'sad' }) : this.setState({ mood:'happy' })
-  }
-
-  render = () => <div onClick={ event => this.handleClick(event) }> { this.state.mood }</div>
+  handleClick = () => {
+    this.setState({
+         mood: "sad"
+    })
 }
 
+
+  render() {
+    return (
+        <div onClick={this.handleClick}>
+              {this.state.mood}
+        </div>
+    );
+  }
+}
 export default SimpleComponent;
