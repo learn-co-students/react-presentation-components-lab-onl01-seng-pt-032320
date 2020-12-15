@@ -23,3 +23,5 @@ class SimpleComponent extends Component {
         return <div onClick={this.handleClick}>{this.state.mood}</div>
     }
   }
+
+  export default SimpleComponent
